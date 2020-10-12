@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'montseratt',sans-serif;  
+}
+
+.app{
+  background-image: url('assets/main_bg.jpg');
+  background-size: cover;
+  background-position:bottom;
+  transition:0.4 ease-out;
+}
+
+.app.winter{
+  background-image: url('assets/winter.jpg');
+}
+
+.app.spring{
+  background-image: url('assets/spring.jpg');
+}
+
+.app.sunny{
+  background-image: url('assets/sunny.jpg');
+}
+.app.haze{
+  background-image: url('assets/haze.jpg');
+}
+
+.app.cloudy{
+  background-image: url('assets/cloudy.jpg');
+}
+.app.rainy{
+  background-image: url('assets/rainy.jpg');
+}
+
+.app.drizzle{
+  background-image: url('assets/drizzle.jpg');
+}
+.app.thunderstorm{
+  background-image: url('assets/thunderstorm.jpg');
+}
+.app.mist{
+  background-image: url('assets/mist.jpg');
+}
+
+
+main{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.50));
+  padding: 25px;
+
+}
+.search-container {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-container .search-bar{
+  display:block;
+  width:100%;
+  padding:15px;
+  appearance: none;
+  background:none;
+  border:none;
+  outline:none;
+  /*making the background a bit transparent of search bar*/
+  background-color: rgba(255,255,255,0.50);
+  border-radius:0px 0px 16px 16px;
+  margin-top:-25px;
+  box-shadow: 0px 8px rgba(0, 0, 0, 0.2);  
+  color: #312d2d;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+/*when focused the search bar's color should turn brighter*/
+.search-container .search-bar:focus{
+  background-color: rgba(255,255,255,0.75);
+}
+
+.location-container .location{
+  color:#FFF;
+  font-size:35px;
+  font-weight:650;
+  font-family: cursive;
+  text-align:center;
+  text-shadow: 3px 3px rgba(50,50,70,0.5)
+}
+
+.location-container .date{
+  color: white;
+  font-size: 20px;
+  font-family: fantasy;
+  font-weight: 500;
+  text-align: center;
+  padding:10px;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-container {
+  text-align: center;
+}
+
+.weather-container .temperature{
+  display: inline-block;
+  margin:30px auto;
+  position:relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  box-shadow: 4px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  
+
+}
+
+.weather-container .weather {
+  color: white;
+  font-size: 60px;
+  font-family: cursive;
+  font-weight: 700;
+  padding:5px 20px;
+  margin-top:-30px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
